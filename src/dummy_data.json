@@ -1,0 +1,14 @@
+{
+	"events" : [
+		[2013, 12, 1, "1", "Credit card payment", ""],
+		[2013, 12, 3, "2", "Kate's wedding ceremony", ""],
+		[2013, 12, 6, "3", "Dental reservation", ""],
+		[2013, 12, 6, "4", "Customer Visit", ""],
+		[2013, 12, 8, "5", "Walmart", ""],
+		[2013, 12, 12, "0", "Tom's graduation ceremony", ""],
+		[2013, 12, 21, "2", "Buy - Mouse", ""],
+		[2013, 12, 23, "1", "Family Mart", ""],
+		[2013, 12, 23, "3", "PMP Certification", ""],
+		[2013, 12, 24, "4", "Salary Income", "", ""]
+	]
+}

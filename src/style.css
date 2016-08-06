@@ -1,0 +1,294 @@
+body{
+	margin: 0px;
+	padding: 0px;
+    font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+}
+a
+{
+	color: #266493;
+	text-decoration: underline;
+}
+a:hover
+{
+	color: #649A2F;
+	text-decoration: none;
+}
+.hidden{
+	display: none;
+}
+.calendar{
+	-moz-border-radius:12px 4px 12px 4px;
+	-webkit-border-radius:12px 4px 12px 4px;
+	border-radius:12px 4px 12px 4px;
+	border: 1px solid #6BC235;
+	margin: 4px;
+	padding: 4px;
+    font-size:12px;
+}
+.calendar .header{
+	-moz-border-radius:12px 4px 12px 4px;
+	-webkit-border-radius:12px 4px 12px 4px;
+	border-radius:12px 4px 12px 4px;
+	padding: 4px;
+	text-align: left;
+	background-color: #6BC235;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	height: 30px;
+}
+
+.calendar .header table, .calendar .header tr, .calendar .header td{
+	border-collapse: collapse;
+	border: 0px;
+}
+.calendar .header .arrow{
+	border-width:6px;
+	border-style:solid;
+	width:0;
+	height:0;
+	line-height:0;
+	margin: 4px 10px;
+	cursor: pointer;
+}
+.calendar .header .left{
+	border-color: transparent #eee transparent transparent;
+}
+.calendar .header .leftHover{
+	border-color: transparent #269D81 transparent transparent;
+}
+.calendar .header .right{
+	border-color: transparent transparent transparent #eee;
+}
+.calendar .header .rightHover{
+	border-color: transparent transparent transparent #269D81;
+}
+.calendar .monthTable{
+	width: 100%;
+	border: none;
+}
+.calendar .monthTable tr{
+}
+.calendar .monthTable td, .calendar .monthTable th{
+	text-align: left;
+	padding: 2px;
+}
+.calendar .monthTable th{
+	text-align: center;
+	font-weight: normal;
+}
+.calendar .monthTable td{
+	cursor: pointer;
+}
+.calendar .monthTable th.workday{
+	color: #000;
+	width: 14%;
+}
+.calendar .monthTable th.weekend{
+	color: #f30;
+	width: 15%;
+}
+.calendar .monthTable td{
+}
+.calendar .monthTable td .dateContainer{
+	height: 30px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	padding: 4px;
+}
+.calendar .monthTable td.today .dateContainer{
+	color: #fff;
+	background-color: #068043;
+}
+.calendar .monthTable td.workday .dateContainer{
+	color: #fff;
+	background-color: #6BC235;
+}
+.calendar .monthTable td.weekend .dateContainer{
+	color: #f00;
+	background-color: #6BC235;
+}
+.calendar .monthTable td.hover .dateContainer{
+	background-color: #269D81;
+}
+.calendar .monthTable td.selected .dateContainer{
+	color: #fff;
+	background-color: #FF7F00;
+}
+.calendar .monthTable td.previousMonth div, .calendar .monthTable td.nextMonth div{
+	background-color: #eee;
+}
+.calendar .monthTable td .dateContainer .date-label{
+	float: left;
+}
+.calendar .monthTable td .dateContainer .event-container{
+	margin-top: 14px;
+}
+.calendar .monthTable td .dateContainer .event-container .pushpin{
+	width: 14px;
+	height: 14px;
+	float: right;
+	border: 1px solid #eee;
+	margin-left: 2px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	line-height: 14px;
+}
+
+.calendar .list{
+	margin: 2px 0px;
+}
+.calendar .list .body{
+}
+.calendar .list .list-background{
+	height: 230px;
+	color: #ccc;
+}
+.calendar .list .list-background .date{
+	font-size: 120px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0px;
+}
+.calendar .list .list-background .day{
+	font-size: 40px;
+	text-align: center;
+}
+.calendar .list .list-container{
+	margin-top: -230px;
+}
+.calendar .list .list-container .no-item{
+	margin: 4px;
+	color: #6BC235;
+	line-height: 40px;
+	padding-left: 20px;
+}
+.calendar .list .list-container .item-container{
+	min-height: 230px;
+}
+.calendar .list .list-container .item-container .item-line{
+	margin: 2px 0px 4px 0px;
+	border-bottom: 1px dotted #A0BF7C;
+}
+.calendar .list .list-container .item-container .item-line table{
+	border: none;
+	width: 100%;
+	height: 40px;
+	border-collapse: collapse;
+}
+.calendar .list .list-container .item-container .item-line table td{
+	margin: 0px;
+	padding: 0px;
+}
+.calendar .list .list-container .item-container .item-line table td.display-color{
+	width: 10px;
+}
+.calendar .list .list-container .item-container .item-line table td.display-text{
+	padding: 0px 4px;
+}
+.calendar .list .list-container .item-container .item-line table td.display-tool{
+	width: 80px;
+}
+.calendar .list .list-container .item-container .item-line table td.edit-color{
+	width: 40px;
+}
+.calendar .list .list-container .item-container .item-line table td.edit-text{
+	padding: 0px 4px;
+	overflow: hidden;
+}
+.calendar .list .list-container .item-container .item-line table td.edit-tool{
+	width: 80px;
+}
+.calendar .list .list-container .item-container .item-line .color-select{
+	width: 40px;
+	height: 32px;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+.calendar .list .list-container .item-container .item-line .color-option-container{
+	position: absolute;
+	height: 40px;
+	background-color: #fff;
+}
+.calendar .list .list-container .item-container .item-line .color-option-item{
+	width: 40px;
+	height: 40px;
+	float: left;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+.calendar .list .list-container .item-container .item-line .color-option-selected{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAJUExURf///wAAAP///37vj08AAAADdFJOU///ANfKDUEAAAB4SURBVHja3NM7EoAgDEXRl+x/0QoI5p/CTjvm3EFEADcPfhCgCUBA4+UMw6tgehEsz4PH02B7FhxPgtfjQHgYSI8C5cHf0M4wY3ZjO6Px8QK1ZkJwYMSuOF9LPPvunaVEvj9ynh1CcWhvJZSnOnFGdwG+36xLgAEAi/UHZy0JGucAAAAASUVORK5CYII=);
+}
+.calendar .list .list-container .item-container .item-line .input{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #6BC235;
+	height: 28px;
+	outline:none;
+}
+.calendar .list .list-container .item-container .item-line .delete{
+	float: left;
+	margin: 0px 4px;
+	width: 32px;
+	height: 32px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEM2MUMwNTc4MjVDMTFFM0IyNjVCOTM4Q0E3MzI2MDYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEM2MUMwNTg4MjVDMTFFM0IyNjVCOTM4Q0E3MzI2MDYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0QzYxQzA1NTgyNUMxMUUzQjI2NUI5MzhDQTczMjYwNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0QzYxQzA1NjgyNUMxMUUzQjI2NUI5MzhDQTczMjYwNiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkCVMzQAAAB6SURBVHja7JdLDsAgCESl4f5XntakO4USMaEmw8KFvzxkNI4AaJWhvRERb06G0N/4SV53bJQBv1pxEECD9VoV4tc6UUNkWBQeNWDed6scR50Aopl5GfMdIAABCEAAAhAgAzB80V5DE+5nCX7tC3ab0pkm5mPV9vwWYAD6Ih1AdaXHzgAAAABJRU5ErkJggg==");
+	cursor: pointer;
+}
+.calendar .list .list-container .item-container .item-line .edit{
+	float: left;
+	margin: 0px 4px;
+	width: 32px;
+	height: 32px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Qjc4OUEwRTg4MjVCMTFFMzkyRjVFODlCQjc3RUFEOTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Qjc4OUEwRTk4MjVCMTFFMzkyRjVFODlCQjc3RUFEOTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCNzg5QTBFNjgyNUIxMUUzOTJGNUU4OUJCNzdFQUQ5NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCNzg5QTBFNzgyNUIxMUUzOTJGNUU4OUJCNzdFQUQ5NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pl6N68AAAACmSURBVHja7JfRCsAgCEV3R///y27BiOhhpV7tJaGgl85Jgwwicu2M+9ocpU4AMpkt5W/2kZ2BCsc30ksgPThbYIS3dRnr4gho4b3A3wYhJ88owRQeKbAEjxJYhkcIqOBsATWcKWCCswTMcIaABi5sAdfJvQIUuFWABrcIUOFaATpcIxACZ90Bf1OqbCapfcOqQFjbvP1fcASOQJk9l9GB3d/zR4ABAPzfM0awofjgAAAAAElFTkSuQmCC");
+	cursor: pointer;
+}
+.calendar .list .list-container .item-container .item-line .back{
+	float: left;
+	margin: 0px 4px;
+	width: 32px;
+	height: 32px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDUxMkYxRjg4MjY5MTFFMzg1QTVENzNBRkI2OTI0MkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDUxMkYxRjk4MjY5MTFFMzg1QTVENzNBRkI2OTI0MkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowNTEyRjFGNjgyNjkxMUUzODVBNUQ3M0FGQjY5MjQyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNTEyRjFGNzgyNjkxMUUzODVBNUQ3M0FGQjY5MjQyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtbvD2IAAACpSURBVHjaxNdLCoAwEARRJ3j/K0cUt5KZ7hrjVrReQPOJOeex8zq/bkSE+s57RJEd2IAH9MQrD4ydcRIgxSmAHCcAVtwF2HEHgMRVABZXAGi8CsDjFUBLPAtoi2cArfEVoD2+AsSL2Ab4BZH5CFsR2d+wDVGZiFoQ1akYRyiLEYpQl2MM4WxIEIS7JbMRxKbUQlDbchlBHkwkBH00KyNoQBkRu4/nlwADAF6yJzvmw4XYAAAAAElFTkSuQmCC");
+	cursor: pointer;
+}
+.calendar .list .list-container .item-container .item-line .check{
+	float: left;
+	margin: 0px 4px;
+	width: 32px;
+	height: 32px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0MyN0ZBM0Y4MjY5MTFFM0IxMjJFMDMzNzU4OTgwNUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0MyN0ZBNDA4MjY5MTFFM0IxMjJFMDMzNzU4OTgwNUQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozQzI3RkEzRDgyNjkxMUUzQjEyMkUwMzM3NTg5ODA1RCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozQzI3RkEzRTgyNjkxMUUzQjEyMkUwMzM3NTg5ODA1RCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjRdnl8AAACfSURBVHja7NdLDoAgDEVR6/73XMVEgsqnQF87kM71nkTAQMy8ec6+Oc8CLMB/AUTEboAQP4dcAGncHPCOmwJycTNAKW4CqMXhgFYcCpDEYQBpHALoiasDeuOqgJF4BNw/But4BISHRxEz8ccnGEHMxj9roAehEc8uQglCK17cBTWEZry6DXMI7XjzHEgRiPj1XsndEBUXA9a9ADmHAAMAwrF7OVnH3CsAAAAASUVORK5CYII=");
+	cursor: pointer;
+}
+.calendar .list .toolbar-footer{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	margin-top: 4px;
+	padding: 4px 10px;
+	background-color: #6BC235;
+	color: #fff;
+	-moz-border-radius: 0px 0px 12px 4px;
+	-webkit-border-radius: 0px 0px 12px 4px;
+	border-radius: 0px 0px 12px 4px;
+}
+.calendar .list .toolbar-footer .add-button{
+	float: right;
+	cursor: pointer;
+}
+.calendar .list .toolbar-footer .back-button{
+	float: left;
+	cursor: pointer;
+}
+#toolbar{
+	border: 1px solid #6BC235;
+	margin: 8px 4px 4px 4px;
+	padding: 4px;
+    font-size:12px;
+}
