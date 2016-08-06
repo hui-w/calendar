@@ -1,0 +1,12 @@
+CACHE MANIFEST
+#version 1.0
+CACHE:  
+	index.html
+	favicon.png
+	events_calendar.min.js
+	events_calendar.min.css 
+NETWORK:  
+    *  
+FALLBACK  
+
+	
