@@ -94,6 +94,7 @@ function updateAppCache() {
 	appCache.update(); // Attempt to update the user’s cache.
 }
 
+/*
 window.applicationCache.addEventListener("updateready", function (e) {
 	if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 		// Browser downloaded a new app cache.
@@ -106,6 +107,7 @@ window.applicationCache.addEventListener("updateready", function (e) {
 		// Manifest didn’t changed. Nothing new to server.
 	}
 }, false);
+*/
 
 if (window.addEventListener) {
 	window.addEventListener("load", init, false);
